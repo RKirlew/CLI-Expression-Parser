@@ -34,7 +34,6 @@ int evaluateExpression(struct Expression* expr) {
             case '/':
                 result /= expr->numbers[i + 1];
                 break;
-            // Add other operators as needed
             default:
                 printf("Unsupported operator: %c\n", expr->operators[i]);
                 exit(1);
@@ -49,7 +48,7 @@ int main(int argc, char *argv[]) {
     expression.numCount = 0;
     expression.opCount = 0;
 
-    for (int i = 1; i < argc; i++) {  // Start from 1 to skip the program name
+    for (int i = 1; i < argc; i++) {  
         char *arg = argv[i];
         for (int j = 0; arg[j] != '\0'; j++) {
             printf("Character: %c\n", arg[j]);
