@@ -9,7 +9,6 @@ struct Expression {
     int opCount;
 };
 
-// Function to check if a character is in a string
 bool in(char target, const char *str) {
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == target) {
@@ -19,7 +18,6 @@ bool in(char target, const char *str) {
     return false; 
 }
 
-// Function to evaluate the expression
 int evaluateExpression(struct Expression* expr) {
     int result = expr->numbers[0];
     for (int i = 0; i < expr->opCount; i++) {
